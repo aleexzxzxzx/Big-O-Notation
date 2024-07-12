@@ -607,7 +607,12 @@ http://stackoverflow.com/questions/19021150/gran-oh-para-n-log-n
 Gráficos utilizados:
 https://github.com/raywenderlich/swift-algorithm-club/blob/master/Big-O%20Notation.markdown
 https://www.quora.com/¿Cómo le explicarías O-log-n-en-algoritmos a un estudiante de primer año de licenciatura?
+
+
 http://www.daveperrett.com/articles/2010/12/07/comp-sci-101-big-o-notation/
 
 Examen sorpresa:
 http://stackoverflow.com/questions/9223351/confused-on-big-o-notation?rq=1
+
+Versión en ingles:
+https://github.com/pavankat/big-o-in-plain-english/tree/master
