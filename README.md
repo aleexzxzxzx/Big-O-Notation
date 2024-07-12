@@ -1,6 +1,6 @@
 # Big-O-Notation
 
-- Para ver la pagina [Click aquí](https://wyalexzz.github.io/Big-O-Notation/)
+- Para ver la pagina [Click aquí](https://aleexzxzxzx.github.io/Big-O-Notation/)
 ## Qué son los algoritmos?
 
 Los algoritmos son básicamente funciones.
