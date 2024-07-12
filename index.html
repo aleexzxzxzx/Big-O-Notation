@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notacion Big O</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="icon" href="images/book-solid.svg" />
+  </head>
+
+  <body>
+    <header class="header">
+      <nav>
+        <a id="links" href="#">Notacion Big O</a>
+        <a id="links2" href="#">Inicio</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h2 id="titleee2" class="barra">
+        ¿Qué son los algoritmos?
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <p>Los algoritmos son básicamente funciones.</p>
+      <p>Funciones que son algoritmos:</p>
+
+      <ul>
+        <li>Toma argumentos</li>
+        <li>Devuelve explícitamente los valores</li>
+      </ul>
+
+      <h3 id="title-h3" class="barra">
+        1.1 Ejemplo de un algoritmo
+        <span class="icono-container">
+          <span class="iconoo">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h3>
+
+      <p>
+        Algoritmo que cuenta el número de vocales en una palabra y devuelve el
+        recuento:
+      </p>
+
+      <div class="code-box">
+        <pre>
+            <span class="red">function</span> <span class="morado">countVowels</span> (word) {
+                <span class="red">var</span> vowels span.azul <span class="azul"> = </span> [<span class="azul">'a', 'i', 'e', 'o', 'u'</span>];
+                <span class="red">var</span> count <span class="azul"> = 0</span>;
+                    <span class="red">for</span> (<span class="red">var</span> i <span class="azul"> = 0</span>; i <span class="azul"><</span> word<span class="azul">.length</span>; i<span class="azul">++</span>) {
+                    <span class="red">for</span> (<span class="red">var</span> j <span class="azul"> = 0</span>; j <span class="azul"><</span> vowels<span class="azul">.length</span>; j<span class="azul">++</span>) {
+                        <span class="red">if</span> (word[i]  <span class="azul">===</span> vowels[j]) {
+                            count<span class="azul">++</span>;
+                        }
+                    }
+                }
+                <span class="red">return</span> count;   
+            }
+    </pre>
+      </div>
+
+      <h2 id="titleee2" class="barra">
+        ¿Cuándo las funciones no son algoritmos?
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <p>Cuando escribe una función, puede o no puede</p>
+      <ul>
+        <li>Tener argumentos</li>
+        <li>Devolver un valor</li>
+      </ul>
+
+      <p>
+        Las funciones que no toman argumentos o devuelven un valor generalmente
+        se usan para secar código repetitivo, imprimir algo en la pantalla o
+        servir como argumento para ejecutar más tarde. Estos tipos de funciones
+        generalmente no se conocen como algoritmos.
+      </p>
+
+      <h3 id="title-h3" class="barra">
+        1.2 Ejemplo de una función que no es un algoritmo
+        <span class="icono-container">
+          <span class="iconoo">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h3>
+
+      <p>Una función anónima que se pasa a jQuery's on función.</p>
+
+      <div class="code-box">
+        <pre>
+            $('button').on('click', function(){ 
+                alert('hi') 
+            });</pre
+        >
+      </div>
+
+      <h3 id="title-h3" class="barra">
+        1.3 Ejemplo de una función que no es un algoritmo
+        <span class="icono-container">
+          <span class="iconoo">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h3>
+
+      <p>Esta función no tiene argumentos, no tiene retorno</p>
+
+      <div class="code-box">
+        <pre>
+            function clearDiv(){
+                $('#div').html("");
+            };</pre
+        >
+      </div>
+
+      <h3 id="title-h3" class="barra">
+        1.4 Ejemplo de una función que no es un algoritmo
+        <span class="icono-container">
+          <span class="iconoo">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h3>
+
+      <p>Esta función tiene un argumento, pero no retorno</p>
+      <div class="code-box">
+        <pre>
+            function clearDiv(text){
+                $('#div').text(text);
+            }</pre
+        >
+      </div>
+
+      <h2 id="titleee2 " class="barra">
+        ¿Qué es Big O?
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <p>Big O es la abreviatura de Big O Notiation.</p>
+      <p>
+        Big O es cómo los programadores hablan sobre la escalabilidad de los
+        algoritmos.
+      </p>
+      <p>
+        La notación Big O de un algoritmo está determinada por cuánto tiempo
+        tarda el algoritmo en devolver la salida en el el peor de los casos.
+      </p>
+      <p>
+        El término matemático para el el peor de los casos es "límite superior".
+      </p>
+
+      <h2 id="titleee2" class="barra">
+        Cómo dices O(n)
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <p>O(n) se lee como "Orden de N" o abreviatura de "O de N".</p>
+      <p>La función O es la función Orden.</p>
+
+      <h2 id="titleee2" class="barra">
+        ¿Por qué se llama Big O?
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <p>
+        Porque estamos lidiando con órdenes de magnitud. O se utiliza porque la
+        tasa de crecimiento de una función también se conoce como el "orden de
+        la función".
+      </p>
+
+      <h2 id="titleee2" class="barra">
+        ¿Por qué es importante Big O?
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <p>Comprender la Gran O de los algoritmos</p>
+
+      <ul>
+        <li>
+          Te mete en la mentalidad de codificar para la eficiencia. Ex: "Tengo
+          que cambiar este algoritmo porque es O(n!)!"
+        </li>
+        <li>
+          Te ayuda a hablar de código con otros desarrolladores. Ex: "No te
+          preocupes, cambié el algoritmo para que no sea O(n^2). Es O(n) ahora."
+        </li>
+        <li>
+          Te ayuda para entrevistas. Podrá hablar sobre la eficiencia de los
+          algoritmos que tiene en la pizarra. Ex: "Lo que acabo de codificar es
+          O(n^2)."
+        </li>
+      </ul>
+
+      <h2 id="titleee2" class="barra">
+        Sumérgete en O(1)
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <h3 id="title-h3" class="barra">
+        Ejemplo 2.1
+        <span class="icono-container">
+          <span class="iconoo">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h3>
+
+      <div class="code-box">
+        <pre>
+            function returnItem(item){
+                return item;
+            }</pre
+        >
+      </div>
+
+      <p>
+        <span class="gris"> returnItem </span> es una función sin sentido, pero
+        ten paciencia conmigo.
+      </p>
+
+      <div class="code-box">
+        <pre>            returnItem(2);</pre>
+      </div>
+
+      <p>
+        <span class="gris"> returnItem's </span> Big O es tiempo constante. No
+        importa a qué pasemos <span class="gris"> returnItem </span> , el
+        algoritmo pasará por una unidad de trabajo.
+      </p>
+
+      <p>
+        La "complejidad" de esta función es <span class="gris"> O(1) </span> .
+      </p>
+
+      <p>
+        Si quieres graficar <span class="gris"> O(1) </span> luego establecería
+        y igual a 1 y lo graficaría.
+      </p>
+
+      <p>y = 1</p>
+      <img src="images/o-1-plot.png" alt="" />
+
+      <p>
+        Tenga en cuenta que cuanto más a la derecha del eje horizontal (eje x)
+        se desplaza, el eje vertical (eje y) también sube.
+      </p>
+
+      <h2 id="titleee2" class="barra">
+        Sumérgete en O(n)
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <h3 id="title-h3" class="barra">
+        Ejemplo 2.2
+        <span class="icono-container">
+          <span class="iconoo">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h3>
+
+      <div class="code-box">
+        <pre>
+    function itemInList(check, list){
+            for (var i = 0; i < list.length; i++){
+                if (list[i] === check) return true;
+            }
+            return false;
+        }</pre
+        >
+      </div>
+
+      <p>Esto funcionará bastante rápido:</p>
+
+      <div class="code-box">
+        <pre>     itemInList(2, [1,2,3]);</pre>
+      </div>
+
+      <p>
+        La "complejidad" de <span class="gris"> itemInList </span> es
+        <span class="gris"> O(n) </span>.
+      </p>
+
+      <p>Esto significa que es un gráfico lineal.</p>
+
+      <p>
+        Para <span class="gris"> itemInList </span>, si la longitud de la matriz
+        es 3; el peor de los casos tomará 3 unidades de trabajo.
+      </p>
+
+      <p>
+        Claro, en el mejor de los casos tomará 1 unidad de trabajo, pero Big O
+        Notation no se trata del mejor de los casos, se trata de la el peor de
+        los casos.
+      </p>
+
+      <p>
+        Si quieres graficar <span class="gris"> O(n) </span> entonces
+        reemplazarías el <span class="gris"> n </span> con un
+        <span class="gris"> x </span> y ponerlo igual a un
+        <span class="gris"> y </span>.
+      </p>
+
+      <p>y = x</p>
+
+      <img src="images/o_n__plot.png" alt="" />
+
+      <p>
+        Observe que cuanto más a la derecha del eje horizontal (eje x) vaya, el
+        eje vertical (eje y) también sube.
+      </p>
+
+      <h2 id="titleee2" class="barra">
+        Sumérgete en O(n^2)
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <h3 id="title-h3" class="barra">
+        Ejemplo 2.3
+        <span class="icono-container">
+          <span class="iconoo">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h3>
+
+      <div class="code-box">
+        <pre>
+            function allCombos(list){
+                var results = [];
+                for (var i = 0; i < results.length; i++){
+                    for (var j = 0; j < results.length; j++){
+                        results.push([i, j]);
+                    }
+                }
+            }</pre
+        >
+      </div>
+
+      <p>
+        Si lo hacemos <span class="gris"> allCombos([1,2,3]) </span> volveríamos
+        <span class="gris">
+          [(1,1) (1,2), (1,3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3)]
+        </span>
+        .
+      </p>
+
+      <p>
+        La "complejidad" de <span class="gris"> allCombos </span> es
+        <span class="gris"> O(n^2) </span>.
+      </p>
+
+      <p>
+        allCombos([1]) -> [[1,1]]. Una unidad de trabajo. 1^2 = 1
+        allCombos([1,2]) -> [[1,1], [1,2], [2,1], [2,2]]. Cuatro unidades de
+        trabajo. 2^2 = 4
+      </p>
+
+      <p>Entonces n * n es n^2.</p>
+
+      <h2 id="titleee2" class="barra">
+        Comparación de O(1), O(n), O(n^2)
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <p>
+        Observe que cuanto más a la derecha del eje horizontal (eje x) vaya, el
+        eje vertical (eje y) sube más rápido para
+        <span class="gris">O(n^2) </span>, más lento para
+        <span class="gris"> O(n) </span>y constante para
+        <span class="gris"> O(1) </span>.
+      </p>
+
+      <p>
+        Esto significa que <span class="gris">O(n^2)</span> corre más lento que
+        <span class="gris">O(n)</span>, que corre más lento que
+        <span class="gris">O(1)</span>.
+      </p>
+
+      <img src="images/runtime_comparison.png" alt="" />
+
+      <h2 id="titleee2" class="barra">
+        O(1) vs O(n) vs O(n^2) explicado sin código
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <h3 id="title-h3" class="barra">
+        O(1)
+        <span class="icono-container">
+          <span class="iconoo">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h3>
+
+      <p>
+        Piensa en la suma de números de un solo dígito con lápiz y papel. La
+        clase de suma que aprendiste cuando eras joven.
+      </p>
+      <div class="code-box">
+        <pre>
+            5 + 5 = 10
+
+            3 + 3 = 6
+
+            2 + 2 = 4
+
+            2 + 3 = 5
+
+            6 + 7 = 13</pre
+        >
+      </div>
+
+      <p>
+        Cada uno de esos diferentes problemas requirió la misma cantidad de
+        operaciones para completarse (o la misma cantidad de unidades de trabajo
+        para completarse). Tomas un número y lo sumas a otro. Listo.
+      </p>
+
+      <p>
+        Debido a que siempre son las mismas unidades de trabajo a completar, sin
+        importar cuál sea el problema, el Big O es constante, este es un ejemplo
+        de <span class="gris">O(1)</span>.
+      </p>
+
+      <h3 id="title-h3" class="barra">
+        O(n)
+        <span class="icono-container">
+          <span class="iconoo">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h3>
+
+      <p>Considere la suma de varios dígitos con lápiz y papel.</p>
+
+      <div class="code-box">
+        <pre>
+            55 + 72 = 127
+
+            455 + 322 = 777
+
+            1234 + 4447 = 5681
+
+            4999 + 56 = 5055</pre
+        >
+      </div>
+
+      <p>
+        Observe cómo el número de operaciones (o la cantidad de unidades de
+        trabajo a completar) aumenta a medida que aumenta el número de dígitos.
+      </p>
+
+      <p>
+        El número de operaciones se correlaciona directamente (son uno a uno)
+        con el número de dígitos del número más grande que se suma.
+      </p>
+
+      <p>
+        Esto requeriría
+        <span class="gris">O(n)</span> unidades de trabajo en el peor de los
+        casos.
+      </p>
+
+      <h3 id="title-h3" class="barra">
+        O(n^2)
+        <span class="icono-container">
+          <span class="iconoo">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h3>
+
+      <p>
+        Ahora, considere la multiplicación de varios dígitos con lápiz y papel.
+      </p>
+
+      <div class="code-box">
+        <pre>            55538 * 92338 = 5128267844</pre>
+      </div>
+
+      <p>
+        Esto es mucho más difícil de hacer que las dos peticiones anteriores.
+      </p>
+
+      <p>
+        Cada dígito del número inferior debe multiplicarse por cada dígito en el
+        número superior.
+      </p>
+
+      <p>
+        Si tuvieras que multiplicar números de 100 dígitos entre sí, se
+        necesitarían 10 000 operaciones matemáticas para completarlas (unidades
+        de trabajo para completarlas).
+      </p>
+
+      <p>
+        Para completar esto se necesitarían
+        <span class="gris">O(n^2)</span> unidades de trabajo en el peor de los
+        casos.
+      </p>
+
+      <h2 id="titleee2" class="barra">
+        Sumérgete en O(log(n))
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <p>O(1) < O(log(n)) < O(n) < O(n^2)</p>
+
+      <img id="imagen1" src="images/o_logn.gif" alt="" />
+
+      <h3 id="title-h3" class="barra">
+        ¿Cómo se ve un algoritmo que tiene una Big O de O(log(n))?
+        <span class="icono-container">
+          <span class="iconoo">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h3>
+
+      <p>
+        La elección del siguiente elemento sobre el cual realizar alguna acción
+        es una de varias posibilidades, y solo se deberá elegir una.
+      </p>
+
+      <h3 id="title-h3" class="barra">
+        Por ejemplo, buscar personas en una guía telefónica es O(log(n))
+        <span class="icono-container">
+          <span class="iconoo">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h3>
+
+      <p>
+        No necesita revisar a todas las personas en la guía telefónica para
+        encontrar la correcta; en cambio, simplemente puede dividir y
+        conquistar, y solo necesita explorar una pequeña fracción de todo el
+        espacio antes de encontrar el número de teléfono de alguien.
+      </p>
+
+      <p>
+        Por supuesto, una guía telefónica más grande todavía le llevará más
+        tiempo, pero no crecerá tan rápido como el aumento proporcional en el
+        tamaño adicional.
+      </p>
+
+      <h3 id="title-h3" class="barra">
+        Ej. un algoritmo que tiene una Big O de O(log(n))
+        <span class="icono-container">
+          <span class="iconoo">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h3>
+
+      <div class="code-box">
+        <pre>
+            function twoDivides(x){
+                var count = 0;
+                while (parseInt(x) > 1) {
+                    x = x / 2;
+                    count = count + 1;
+                }
+                return count;
+            }</pre
+        >
+      </div>
+
+      <h4 id="title-h4" class="barra">
+        Calcular la Big O del algoritmo anterior
+        <span class="icono-container">
+          <span class="iconoo2">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h4>
+
+      <h5>Sin matemáticas</h5>
+
+      <p>
+        A menudo no se necesitan matemáticas para averiguar cuál es el Big-O de
+        un algoritmo. Simplemente se puede usar la intuición.
+      </p>
+
+      <p>
+        Observa cuántas unidades de trabajo tiene que realizar el algoritmo a
+        medida que crece la entrada y haz coincidir eso con el Big O correcto.
+      </p>
+
+      <p>
+        Sin contar la declaración de retorno o la variable: <br />
+        twoDivides(2) = 1. Las operaciones para cada paso del bucle serían x =
+        2/1 (para la división) y contar = 0 + 1 (para el conteo); así que 2
+        total. <br />
+
+        twoDivides(4) = 2. Las operaciones serían
+        <span class="gris">x = 4/2</span> & y
+        <span class="gris">count = 0 + 1</span>, <span class="gris">2/1</span> &
+        y <span class="gris">1 + 1</span>; entonces 4 en total. <br />
+
+        twoDivides(8) = 3. Las operaciones serían
+        <span class="gris">x = 8/2</span> & y
+        <span class="gris">count = 0 + 1</span>, <span class="gris">4/2</span> &
+        y <span class="gris">1 + 1</span>, <span class="gris">2/2</span> & y
+        <span class="gris">2 + 1</span>; entonces 6 en total. <br />
+
+        twoDivides(16) = 4. Las operaciones serían
+        <span class="gris">x = 16/2</span> & y
+        <span class="gris">count = 0 + 1</span>, <span class="gris">8/2</span> &
+        y <span class="gris">1 + 1</span>, <span class="gris">4/2</span> & y
+        <span class="gris">2 + 1</span>, <span class="gris">2/2</span> & y
+        <span class="gris">3 + 1</span>, 8 En total. <br />
+
+        twoDivides(32) = 5. Las operaciones serían
+        <span class="gris">x = 32/2</span> & y
+        <span class="gris">count = 0 + 1</span>,
+        <span class="gris">16/2</span> & y <span class="gris">1 + 1</span>,
+        <span class="gris">8/2</span> & y <span class="gris">2 + 1</span>,
+        <span class="gris">4/2</span> & y <span class="gris">3 + 1</span>,
+        <span class="gris">2/2</span> & y <span class="gris">4 + 1</span>;
+        entonces 10 en total. <br />
+
+        La "complejidad" de twoDivides es <span class="gris">O(log(n))</span>.
+        <br />
+      </p>
+
+      <table id="operacionesTabala">
+        <tbody>
+          <tr>
+            <td>n</td>
+            <td>Operaciones</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>32</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>...</td>
+            <td>...</td>
+          </tr>
+          <tr>
+            <td>n</td>
+            <td>2*log(n)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        <span class="gris">log(n)</span> aquí esencialmente significa "el número
+        de veces que podemos dividir <span class="gris">n</span> por 2".
+      </p>
+
+      <p>
+        <strong>Nota:</strong> Al escribir la notación Big O, se ignora el "2"
+        inicial; no cambia significativamente el comportamiento asintótico de la
+        función para grandes valores de <span class="gris">n</span>. Por lo
+        tanto, podemos ver <span class="gris">O(2 * log(n))</span> es
+        equivalente a <span class="gris">O(log(n))</span>. En general, al
+        escribir la notación Big O, solo le importa la parte más significativa
+        de la complejidad (incluso <span class="gris">2n^2 + 2n</span> sería
+        escrito como <spa class="gris">O(n^2)</spa>.
+      </p>
+
+      <p>
+        En este caso <span class="gris">(log(n))</span>, el tamaño del número es
+        el <span class="gris">n</span>. Podemos ver que el número de operaciones
+        no es constante, pero no crece linealmente (y crece más lentamente como
+        el <span class="gris">n</span> aumentos).
+      </p>
+
+      <h4>caso general, con matemáticas</h4>
+
+      <table id="iteracionTabla">
+        <tbody>
+          <tr>
+            <td>Iteración</td>
+            <td>x</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>x (esto es lo mismo que x/1)</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>x/2</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>x/4</td>
+          </tr>
+          <tr>
+            <td>..</td>
+            <td>...</td>
+          </tr>
+          <tr>
+            <td>k</td>
+            <td>x/2^k</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>2^k = x → Aplicando registro a ambos lados → k = log(x)</p>
+      <p>log(2^k) = log(x)</p>
+      <p>k*log(2) = log(x)</p>
+      <p>k = log(x)/log(2)</p>
+      <p>k = log(x)/log(2)</p>
+
+      <p>k es aproximadamente igual a log(x)</p>
+
+      <h2 id="titleee2" class="barra">
+        Sumérgete en O(n log n)
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <p>O(1) < O(log(n)) < O(n) < O(n log(n)) < O(n^2)</p>
+
+      <div class="code-box">
+        <pre>
+    // assume that n is an integer
+    function nlogn(n){
+	    var results = [];
+	    for (var i = 0; i < n; i++){ // this loop is executed n times, so O(n)
+	    for (var j = n; j > 0; j = parseInt(j/2)){ // this loop is executed log(n) times, so O(logn)
+	    	results.push(j);
+	    }
+	}
+	return results;
+}</pre
+        >
+      </div>
+
+      <p>
+        Para bucles adyacentes, añadiría los tiempos de ejecución juntos, p.
+        <span class="gris">O(n + m)</span>. Para bucles anidados, los
+        multiplicas, p. <span class="gris">O(n*m)</span>, o en este caso
+        <span class="gris">O(nlogn)</span>.
+      </p>
+
+      <p>Esto resultaría en</p>
+
+      <div class="code-box">
+        <pre>
+        nlogn(3)
+        [3, 1, 3, 1, 3, 1]
+</pre
+        >
+      </div>
+
+      <div class="code-box">
+        <pre>
+        nlogn(4)
+        [4, 2, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1]
+</pre
+        >
+      </div>
+
+      <h2 id="titleee2" class="barra">
+        Sumérgete en O(2^n)
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <p>Los algoritmos con una Big O de 2 ^ n suelen ser recursivos.</p>
+
+      <div class="code-box">
+        <pre>
+        // assume number is an integer
+        <span class="red">function</span> <span class="morado">fib</span>(number) {
+         <span class="red">if</span> (number <span class="azul"><= 1</span>) <span class="red">return</span> number;
+         <span class="red">return</span> <span class="morado">fib</span>(number <span class="azul">- 2</span>) <span class="azul">+</span> <span class="morado">fib</span>(number <span class="azul">- 1</span>);
+        }</pre>
+      </div>
+
+      <p>
+        <span class="gris">O(2^n)</span> ocurre cuando un problema de tamaño
+        <span class="gris">n</span> requiere resolver dos problemas más pequeños
+        de tamaño <span class="gris">n-1</span> (en fibonacci esto es casi
+        cierto, son solo dos problemas uno de tamaño
+        <span class="gris">n-1</span> y el otro de tamaño
+        <span class="gris">n-2</span>. En esencia, está duplicando la cantidad
+        de problemas que necesita resolver cada vez que n aumenta.
+      </p>
+
+      <p>
+        Supongamos que nuestro algoritmo toma dos operaciones, y que resolver un
+        problema de tamaño <span class="gris">n</span> requiere resolver dos
+        problemas de tamaño <span class="gris">n-1</span>. Luego, el número de
+        operaciones para aumentar los valores de
+        <span class="gris">n</span> son:
+      </p>
+
+      <table id="tabla2">
+        <tbody>
+          <tr>
+            <td>n</td>
+            <td>ops(n)</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>4 = 2 + 2 = ops(2-1) + ops(2-1) = 2(2) = 2^2</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>8 = 4 + 4 = ops(3-1) + ops(3-1) = 2(4) = 2(2^2)= 2^3</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>16 = 8 + 8 = ops(4-1) + ops(4-1) = 2(8) = 2(2^3) = 2^4</td>
+          </tr>
+          <tr>
+            <td>...</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>k</td>
+            <td>
+              (k-1) + (k-1) = 2(k-1) = 2((k-2) + (k-2)) = 4(k-2) = 8(k-3) = ...
+              = 2^(k-1)(2) = 2^k
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="titleee2" class="barra">
+        Sumérgete en O(n!)
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <p>
+        Cualquier algoritmo que calcule todas las permutaciones de una matriz
+        dada es <span class="gris">O(n!)</span>. Factorial es el número que se
+        obtiene si se multiplican todos los números del 1 al
+        <span class="gris">n</span>.
+      </p>
+
+      <p>
+        Imagina que tienes una serie de palabras y quieres devolver todas las
+        combinaciones posibles de esas palabras.
+      </p>
+
+      <p>Así que dado</p>
+
+      <div class="code-box">
+        <pre>
+  ['apple', 'bear', 'limp bizkit']
+</pre
+        >
+      </div>
+
+      <p>El algoritmo devolvería una matriz de 6 matrices, como esta:</p>
+      <div class="code-box">
+        <pre>
+  [
+          ['apple', 'bear', 'limp bizkit'],
+          ['apple', 'limp bizkit', 'bear'],
+          ['bear', 'limp bizkit', 'apple'],
+          ['bear', 'apple', 'limp bizkit'],
+          ['limp bizkit', 'bear', 'apple'],
+          ['limp bizkit', 'apple', 'bear'],
+  ]
+</pre
+        >
+      </div>
+
+      <p>
+        Escribir un algoritmo que hiciera eso sería O(n!)... naquí está la
+        longitud de la matriz, entonces 3! = 3 * 2 * 1 = 6.
+      </p>
+
+      <p>Otro ejemplo:</p>
+
+      <div class="code-box">
+        <pre>
+          // assume n is an integer
+          function nFactorial(n) {
+            for (var i = 0; i < n; i++) {
+              return nFactorial(n - 1);
+            }
+          }
+</pre
+        >
+      </div>
+
+      <p>
+        Esto ejecuta la <span class="gris">nFactorial</span> función
+        <span class="gris">n-1</span> veces para una entrada
+        <span class="gris">n</span>. Por lo tanto, obtienes
+        <span class="gris">n*nFactorial(n-1)</span>.
+      </p>
+
+      <p>
+        <span class="gris"
+          >n*f(n-1) = n*(n-1)*f(n-2) = ... = n*(n-1)*(n-2)*...*1*f(1) = n!</span
+        >.
+      </p>
+
+      <h2 id="titleee2" class="barra">
+        El Big O puede ser engañoso
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <p>
+        La notación Big-O es una estimación y solo es útil para valores grandes
+        de n.
+      </p>
+
+      <h4 id="title-h4" class="barra">
+        Ordenación por inserción vs ordenación por combinación
+        <span class="icono-container">
+          <span class="iconoo2">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h4>
+
+      <p>
+        El tiempo de ejecución en el peor de los casos para el
+        <strong>algoritmo de ordenación por inserción es O(n^2)</strong>.
+      </p>
+
+      <p>
+        En comparación con Big O, es peor que el tiempo de ejecución de la
+        <strong>ordenación por combinación, que es O(n log n)</strong>.
+      </p>
+
+      <p>
+        Pero para pequeñas cantidades de datos (cuando n es pequeño), la
+        ordenación por inserción es en realidad más rápida, ¡especialmente si la
+        matriz ya está parcialmente ordenada!
+      </p>
+
+      <p>
+        Big O es útil cuando se comparan dos algoritmos para determinar cuál se
+        ejecuta más rápido cuando n es grande.
+      </p>
+
+      <p>
+        Si la cantidad de datos (n) es relativamente pequeña, entonces incluso
+        un algoritmo lento será lo suficientemente rápido para el uso práctico
+      </p>
+
+      <h4 id="title-h4" class="barra">
+        Otras preocupaciones
+        <span class="icono-container">
+          <span class="iconoo2">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h4>
+
+      <p>
+        El tiempo de ejecución promedio de los algoritmos puede variar
+        significativamente para diferentes entradas, pero la notación Big O solo
+        indica el peor escenario posible. Por lo tanto, puede haber un algoritmo
+        que se ejecute <span class="gris">logn</span> en el 99 % de los casos,
+        pero que el 1 % de las veces tome <span class="gris">n!</span> tiempo, y
+        otro que resuelva el mismo problema pero que siempre se ejecute
+        <span class="gris">n^2</span>. Por lo tanto, la notación Big O no ofrece
+        una imagen completa de la eficiencia del tiempo de ejecución. Esto es
+        particularmente notable cuando se observan algoritmos de resolución, que
+        tienen diferentes tiempos de ejecución en el mejor, peor y promedio de
+        los casos. Sin embargo, la mayoría de las discusiones en torno al
+        análisis del tiempo de ejecución se centran en Big O y el peor de los
+        casos.
+      </p>
+
+      <h2 id="titleee2" class="barra">
+        Otras categorías de Big O de la más rápida a la más lenta
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <table id="tabla3">
+        <tbody>
+          <tr>
+            <td style="text-align: center">Gran O</td>
+            <td style="text-align: center">Nombre</td>
+            <td style="text-align: center">Descripción</td>
+          </tr>
+          <tr>
+            <td>O(1)</td>
+            <td>Constante</td>
+            <td>
+              <strong>Esto es lo mejor</strong>. El algoritmo siempre tarda la
+              misma cantidad de tiempo, independientemente de la cantidad de
+              datos que haya. En otras palabras, la cantidad de unidades de
+              trabajo que tarda el algoritmo en completarse es independiente del
+              tamaño de la entrada. Ejemplo: buscar un elemento de una matriz
+              por su índice.
+            </td>
+          </tr>
+          <tr>
+            <td>O(log n)</td>
+            <td>Logarítmico</td>
+            <td>
+              <strong>Bastante bueno.</strong> Este tipo de algoritmos eliminan
+              un porcentaje de la cantidad de datos que se deben analizar en
+              cada iteración. Si tienes 100 elementos, se necesitan
+              aproximadamente 7 pasos para encontrar la respuesta. Con 1000
+              elementos, se necesitan 10 pasos. Y con 1 000 000 de elementos,
+              solo se necesitan 20 pasos. Esto es muy rápido incluso para
+              grandes cantidades de datos. Ejemplo: búsqueda binaria (búsqueda
+              de matriz ordenada).
+            </td>
+          </tr>
+          <tr>
+            <td>O(n)</td>
+            <td>Lineal</td>
+            <td>
+              <strong>Buen rendimiento</strong>. Si tiene 100 elementos, esto
+              realiza 100 unidades de trabajo. Este suele ser el caso de un
+              bucle. Si duplica el tamaño de n, entonces el algoritmo realiza 2
+              * n unidades de trabajo. Ejemplo: búsqueda de matriz no ordenada
+            </td>
+          </tr>
+          <tr>
+            <td>O(n log n)</td>
+            <td>"Linealítmico"</td>
+            <td>
+              <strong>Rendimiento aceptable</strong>. Es un poco peor que el
+              algoritmo lineal, pero no demasiado malo. Ejemplo: mergesort y
+              otros algoritmos de ordenamiento "rápidos".
+            </td>
+          </tr>
+          <tr>
+            <td>O(n^2)</td>
+            <td>Cuadrático</td>
+            <td>
+              <strong>Un poco lento</strong>. Si tienes 100 elementos, esto hace
+              100^2 = 10 000 unidades de trabajo. Duplicar la cantidad de
+              elementos lo hace cuatro veces más lento (porque 2 al cuadrado es
+              igual a 4). Ejemplo: un bucle for doble -> tienes que mirar cada
+              par de elementos de entrada.
+            </td>
+          </tr>
+          <tr>
+            <td>O(n^3)</td>
+            <td>Cúbico</td>
+            <td>
+              <strong>Rendimiento deficiente</strong>. Si tiene 100 elementos,
+              esto hace 100^3 = 1.000.000 de unidades de trabajo. Duplicar el
+              tamaño de entrada lo hace ocho veces más lento. Ejemplo:
+              multiplicación de matrices. O bien, está mirando cada par de
+              entradas, pero la operación que realiza requiere mirar todas las
+              entradas nuevamente.
+            </td>
+          </tr>
+          <tr>
+            <td>O(2^n)</td>
+            <td>Exponencial</td>
+            <td>
+              <strong>Rendimiento muy bajo</strong>. Se desea evitar este tipo
+              de algoritmos, pero a veces no hay otra opción. Añadir un solo bit
+              a la entrada duplica el tiempo de ejecución. Ejemplo: adivinar por
+              fuerza bruta los resultados de una secuencia de
+              <span class="gris">n</span> lanzamientos de moneda.
+            </td>
+          </tr>
+          <tr>
+            <td>O(n!)</td>
+            <td>Factorial</td>
+            <td>
+              <strong>Insoportablemente lento</strong>. Literalmente, se
+              necesitan un millón de años para hacer cualquier cosa. Ejemplo:
+              hay que tener en cuenta todos los subconjuntos posibles de los
+              datos de entrada. Veamos el problema del viajante de comercio: la
+              solución a la fuerza bruta es <span class="gris">n!</span>...
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <img id="imagen1" src="images/most-of-them.png" />
+
+      <h2 id="titleee2" class="barra">
+        Otro gráfico
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <table id="tabla3-2">
+        <tbody>
+          <tr>
+            <td style="text-align: center">Gran O</td>
+            <td style="text-align: center">Cálculos para 10 cosas</td>
+            <td style="text-align: center">Cálculos para 100 cosas</td>
+          </tr>
+          <tr>
+            <td>O(1)</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>O(log n)</td>
+            <td>3</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>O(n)</td>
+            <td>10</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>O(n log n)</td>
+            <td>30</td>
+            <td>700</td>
+          </tr>
+          <tr>
+            <td>O(n^2)</td>
+            <td>100</td>
+            <td>10000</td>
+          </tr>
+          <tr>
+            <td>O(n^3)</td>
+            <td>1000</td>
+            <td>1000000</td>
+          </tr>
+          <tr>
+            <td>O(2^n)</td>
+            <td>1024</td>
+            <td>2^100</td>
+          </tr>
+          <tr>
+            <td>O(n!)</td>
+            <td>3628800</td>
+            <td>
+              100! -> matemáticamente este es el producto de (100 * 99 * 98...)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="titleee2" class="barra">
+        Otro gráfico más
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <table id="tabla4">
+        <tbody>
+          <tr>
+            <td style="text-align: center">n</td>
+            <td style="text-align: center">logn</td>
+            <td style="text-align: center">n</td>
+            <td style="text-align: center">nlogn</td>
+            <td style="text-align: center">n^2</td>
+            <td style="text-align: center">2^n</td>
+            <td style="text-align: center">n!</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>3.69</td>
+            <td>2</td>
+            <td>1.4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>1.1</td>
+            <td>3</td>
+            <td>3.3</td>
+            <td>9</td>
+            <td>8</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>1.4</td>
+            <td>4</td>
+            <td>5.5</td>
+            <td>16</td>
+            <td>16</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>1.6</td>
+            <td>5</td>
+            <td>8</td>
+            <td>25</td>
+            <td>32</td>
+            <td>120</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>2.3</td>
+            <td>10</td>
+            <td>23</td>
+            <td>100</td>
+            <td>1024</td>
+            <td>3628800</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="titleee2" class="barra">
+        Examen sorpresa
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <p>¿Cuál es el gran O de cada uno de estos algoritmos?</p>
+
+      <p>a)</p>
+
+      <div class="code-box">
+        <pre>
+          function countUpA(n){
+            var count = 0;
+              for (var i = 1; i <= n; i++) {
+                  for (var j = n; j > 1; j--) {
+                      for (var k = 1; k < n; k = k + 2) {
+                          count++;
+                      }
+                  }
+              }
+              return count;
+          }          
+</pre
+        >
+      </div>
+
+      <p>b)</p>
+
+      <div class="code-box">
+        <pre>
+    function countUpB(n){
+      var count = 0;
+      for (var i = 1; i <= n; i++) {
+          for (var j = n; j > 1; j--) {
+              for (var k = 1; k < 1000; k = k + 2) {
+                  count++;
+              }
+          }
+      }
+      return count;
+    }    
+
+</pre
+        >
+      </div>
+
+      <p>c)</p>
+
+      <div class="code-box">
+        <pre>
+    function countUpC(n){
+      var count = n;
+      for (var i = 1; i <= 1000000; i++) {
+          for (var j = i; j > 500; j--) {
+              for (var k = 1; k < 10500; k = k + 2) {
+                  count++;
+              }
+          }
+      }
+    
+      return count;
+    }       
+
+</pre
+        >
+      </div>
+
+      <p>d)</p>
+      <div class="code-box">
+        <pre>
+    function countUp(n){
+      var count = 0;
+      var j = 1;
+      for (var i = 1; i < n; i++) {
+            while (j < n) {
+                j++;
+                count++;
+            }
+            j = 1;
+      }
+      return count;
+    }
+    
+</pre
+        >
+      </div>
+
+      <p>e)</p>
+
+      <div class="code-box">
+        <pre>
+    function countUpE(n){
+      var count = 0;
+      var i = n;
+      while (i > 1){
+          count++;
+          i = i / 2;
+      }
+      return count;
+    }    
+    
+</pre
+        >
+      </div>
+
+      <h2 id="titleee2" class="barra">
+        Respuestas del Examen
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <p>a) O(n^3)</p>
+
+      <p>
+        bucles triples for, a medida que la entrada crece, las unidades de
+        trabajo crecen a un ritmo cúbico.
+      </p>
+
+      <p>b) O(n^2)</p>
+
+      <p>
+        bucles triples, pero solo 2 de los bucles aumentan las unidades de
+        trabajo con respecto a la entrada
+      </p>
+
+      <p>c) O(1)</p>
+
+      <p>
+        A medida que aumenta la entrada, las unidades de trabajo siempre
+        permanecen iguales.
+      </p>
+
+      <p>d) O(n^2)</p>
+
+      <p>
+        A medida que aumenta la entrada, las unidades de trabajo aumentan a un
+        ritmo cuadrático. mi) O(log n)
+      </p>
+
+      <p>
+        A medida que aumenta la entrada, las unidades de trabajo aumentan, pero
+        no a un ritmo lineal o cuadrático.
+      </p>
+
+      <h2 id="titleee2" class="barra">
+        Recursos utilizados
+        <span class="icono-container">
+          <span class="icono">
+            <!-- Aquí va tu SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5c0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5c0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </h2>
+
+      <p class="finales">♦ Explicaciones ♦</p>
+      <i class="ri-links-fill"></i>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        id="linksAlso"
+        id="link-final"
+        href="https://justin.abrah.ms/computer-science/big-o-notation-explained.html"
+        >Big-O notation explained by a self-taught programmer</a
+      >
+      <br />
+      <i class="ri-links-fill"></i>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        id="linksAlso"
+        id="link-final"
+        href="https://stackoverflow.com/questions/107165/big-o-for-eight-year-olds?rq=1%20Ejemplos%20de%20c%C3%B3digos%20reel"
+        >Big-O for Eight Year Olds? [duplicate]</a
+      >
+      <p class="finales">♦ Ejemplos de códigos reelaborados desde aquí: ♦</p>
+      <i class="ri-links-fill"></i>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        id="linksAlso"
+        id="link-final"
+        href="https://stackoverflow.com/questions/17122807/big-o-ologn-code-example"
+        >Big O - O(log(n)) code example</a
+      >
+      <br />
+      <i class="ri-links-fill"></i>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        id="linksAlso"
+        id="link-final"
+        href="https://stackoverflow.com/questions/19021150/big-oh-for-n-log-n"
+        >Big Oh for (n log n) [closed]</a
+      >
+
+      <p class="finales">♦ Gráficos utilizados: ♦</p>
+      <i class="ri-links-fill"></i>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        id="linksAlso"
+        id="link-final"
+        href="https://github.com/kodecocodes/swift-algorithm-club/blob/master/Big-O%20Notation.markdown"
+        >Big-O Notation</a
+      >
+      <br />
+
+      <i class="ri-links-fill"></i>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        id="linksAlso"
+        id="link-final"
+        href="https://www.quora.com/How-would-you-explain-O-log-n-in-algorithms-to-1st-year-undergrad-student-Can-any-one-explain-it-with-mathematical-proof-for-log-n-complexity-by-taking-a-simple-example-like-Binary-search-and-simple-to-understand"
+        >How would you explain O(log n) in algorithms to 1st year undergrad
+        student?</a
+      >
+      <br />
+      <i class="ri-links-fill"></i>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        id="linksAlso"
+        id="link-final"
+        href="https://www.daveperrett.com/articles/2010/12/07/comp-sci-101-big-o-notation/"
+        >CompSci 101 - Big-O notation</a
+      > <br>
+
+      <p class="finales">♦ Versión en ingles ♦</p>
+      <i class="ri-links-fill"></i>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        id="linksAlso"
+        id="link-final"
+        href="https://github.com/pavankat/big-o-in-plain-english"
+        >Algorithms & Big O Notation in Plain English | pavankat</a
+      >
+    </div>
+  </body>
+</html>

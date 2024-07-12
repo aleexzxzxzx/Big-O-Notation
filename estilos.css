@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#titleee {
+  font-weight: 800;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(13, 17, 23);
+  scrollbar-color: blue;
+  color: rgb(230, 237, 243);
+}
+
+.container {
+  background-color: rgb(13, 17, 23);
+  margin-left: 25%;
+  margin-right: 25%;
+  height: 1810vh;
+  padding-top: 70px; /* Ajusta según la altura del header */
+  margin-top: -10.12px;
+}
+
+#liiinks {
+  margin-left: -10px;
+}
+
+.header {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 15px 0;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Asegura que esté por encima del contenido */
+}
+
+#links {
+  color: rgb(119, 119, 119);
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-left: 380px;
+}
+
+#links:hover {
+  color: rgb(73, 72, 72);
+}
+
+#links2 {
+  background-color: rgb(231, 231, 231);
+  font-size: 16px;
+  padding: 15px 10px;
+  margin: 12px;
+  color: rgb(119, 119, 119);
+  text-decoration: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#links2:hover {
+  color: rgb(80, 79, 79);
+}
+
+h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  border-bottom: 1px solid rgb(37, 42, 49); /* Establece la línea gris abajo del texto */
+}
+
+h3 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+ul {
+  margin-left: 2.3rem;
+}
+ul li {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.code-box {
+  background-color: rgb(22, 27, 34); /* Color de fondo oscuro */
+  color: #c9d1d9; /* Color del texto */
+  border: 1px solid #21262d; /* Borde oscuro */
+  border-radius: 6px;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  overflow-x: auto; /* Scroll horizontal si es necesario */
+  white-space: pre-wrap; /* Mantiene el formato del texto */
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 13.6px;
+}
+
+.code-box pre {
+  margin: 0;
+  white-space: pre-wrap; /* Mantiene el formato del texto */
+}
+.code-box {
+  margin-bottom: 15px;
+}
+
+pre .red {
+  color: rgb(255, 123, 144);
+}
+
+pre .morado {
+  color: rgb(210, 168, 255);
+}
+
+pre .azul {
+  color: rgb(121, 192, 255);
+}
+
+.gris {
+  border-radius: 5px;
+  padding-left: 4px;
+  padding-right: 3px;
+  background-color: rgb(52, 57, 65);
+}
+
+img {
+  display: block; /* Para que la imagen se comporte como un bloque y pueda ser centrada */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  margin-bottom: 10px;
+  max-width: 100%;
+  height: auto;
+}
+h4 {
+  margin-bottom: 15px;
+}
+
+h5 {
+  margin-bottom: 15px;
+}
+
+table {
+  width: 50%; /* Ancho de la tabla al 50% del contenedor */
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+#tabla2 {
+  margin-top: 13px;
+  width: 71%; /* Ancho de la tabla al 71% del contenedor */
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+#tabla3 {
+  margin-top: 13px;
+  width: 100%; /* Ancho de la tabla al 71% del contenedor */
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+#tabla3-2 {
+  margin-top: 13px;
+  width: 88%; /* Ancho de la tabla al 71% del contenedor */
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+#tabla4 {
+  margin-top: 13px;
+  width: 21%; /* Ancho de la tabla al 71% del contenedor */
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+#iteracionTabla {
+  width: 35%; /* Ancho de la tabla al 35% del contenedor */
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+#operacionesTabala {
+  width: 0%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+th,
+td {
+  border: 1px solid rgb(48, 54, 61);
+  padding: 8px;
+  text-align: left;
+}
+/* Estilo para las filas impares */
+tr:nth-child(odd) {
+  background-color: rgb(22, 27, 34); /* Color de fondo gris claro */
+}
+
+/* Estilo para el primer renglón */
+tr:first-child {
+  background-color: rgb(
+    13,
+    17,
+    23
+  ); /* Color de fondo negro para el primer renglón */
+  color: white; /* Color de texto blanco para contrastar */
+}
+
+#linksAlso {
+  color: rgb(38, 131, 207);
+  text-decoration: none;
+  margin-bottom: 15px;
+
+  text-align: justify;
+}
+
+#linksAlso:hover {
+  text-decoration: underline;
+}
+
+.finales {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.finales:hover {
+  margin-left: 10px;
+  transition: all 0.5s ease;
+}
+
+i {
+  margin-left: 15px;
+}
+
+.icono-container {
+  display: inline-block; /* Hace que el contenedor sea en línea */
+  vertical-align: middle; /* Alineación vertical con el texto */
+  position: relative; /* Posición relativa para alinear el ícono */
+}
+
+/* Estilo para el ícono */
+.icono {
+  position: absolute; /* Posición absoluta para posicionar el ícono dentro del contenedor */
+  top: 100%; /* Alinea el ícono al 100% del borde superior del contenedor */
+  left: 0; /* Alinea el ícono a la izquierda dentro del contenedor */
+  visibility: hidden; /* Por defecto el ícono está oculto */
+  margin-top: -20px; /* Espacio adicional hacia abajo */
+}
+
+/* Estilo para mostrar el ícono cuando haces hover sobre el h2 */
+#titleee:hover .icono {
+  display: inline-block; /* Mostrar el ícono en línea */
+}
+
+/* Estilo para mostrar el ícono cuando haces hover sobre el h2 */
+#titleee2:hover .icono {
+  visibility: visible; /* Mostrar el ícono */
+}
+
+.iconoo {
+  position: absolute; /* Posición absoluta para posicionar el ícono dentro del contenedor */
+  top: 100%; /* Alinea el ícono al 100% del borde superior del contenedor */
+  left: 0; /* Alinea el ícono a la izquierda dentro del contenedor */
+  visibility: hidden; /* Por defecto el ícono está oculto */
+  margin-top: -13px; /* Espacio adicional hacia abajo */
+}
+/* Estilo para mostrar el ícono cuando haces hover sobre el h2 */
+#title-h3:hover .iconoo {
+  visibility: visible; /* Mostrar el ícono */
+}
+
+#title-h3 {
+  font-size: 1.17em;
+}
+
+.iconoo2 {
+  position: absolute; /* Posición absoluta para posicionar el ícono dentro del contenedor */
+  top: 100%; /* Alinea el ícono al 100% del borde superior del contenedor */
+  left: 0; /* Alinea el ícono a la izquierda dentro del contenedor */
+  visibility: hidden; /* Por defecto el ícono está oculto */
+  margin-top: -10px; /* Espacio adicional hacia abajo */
+}
+/* Estilo para mostrar el ícono cuando haces hover sobre el h2 */
+#title-h4:hover .iconoo2 {
+  visibility: visible; /* Mostrar el ícono */
+}
+
+#imagen1 {
+  margin-left: 0px;
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1024px) {
+}
+
+/* Estilos para pantallas medianas */
+@media (max-width: 1023px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+  .header {
+    display: none;
+  }
+  h2 {
+    font-size: 24px;
+  }
+}
